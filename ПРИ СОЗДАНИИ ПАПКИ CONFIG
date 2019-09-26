@@ -1,0 +1,24 @@
+Что бы убрать config
+http://qaru.site/questions/16071148/undo-npm-run-eject-in-react
+
+удаляем все папки
+$ rm -r scripts/  //Remove Your scripts folder
+$ rm -r config/   //Remove Your config folder
+$ rm -r node_modules//  //Remove Your node_modules folder
+
+
+А внутри файла package.json удаляем что с минусом добавляем что с +
+
+"scripts": {
++    "start": "react-scripts start",
++    "build": "react-scripts build",
++    "test": "react-scripts test --env=jsdom",
++    "eject": "react-scripts eject"
+-    "start": "node scripts/start.js",
+-    "build": "node scripts/build.js",
+-    "test": "node scripts/test.js --env=jsdom"
+  }
+
+
+  npm install
+  npm install react-scripts
